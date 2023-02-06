@@ -1,5 +1,11 @@
 var container = document.createElement("div");
 container.className = "container ";
+var h1 = document.createElement("h1")
+h1.setAttribute("id","title")
+h1.innerHTML="Calculator"
+var para = document.createElement("p")
+para.setAttribute("id","description")
+para.innerHTML="Enter or press first number then operator followed bt number 2 and press enter for result"
 
 var out = document.createElement("span");
 
@@ -7,7 +13,7 @@ var out = document.createElement("span");
 var input = document.createElement("input");
 input.setAttribute("type", "text");
 input.setAttribute("class", "input");
-input.setAttribute("id", "inputScr");
+input.setAttribute("id", "result");
 input.setAttribute("value", "0");
 
 container.append(input, out);
@@ -22,7 +28,7 @@ var seven = createButton(
   "type",
   "button",
   "id",
-  "seven",
+  "7",
   "value",
   "7",
   "7"
@@ -33,7 +39,7 @@ var eight = createButton(
   "type",
   "button",
   "id",
-  "eight",
+  "8",
   "value",
   "8",
   "8"
@@ -44,7 +50,7 @@ var nine = createButton(
   "type",
   "button",
   "id",
-  "nine",
+  "9",
   "value",
   "9",
   "9"
@@ -66,7 +72,7 @@ var four = createButton(
   "type",
   "button",
   "id",
-  "four",
+  "4",
   "value",
   "4",
   "4"
@@ -77,7 +83,7 @@ var five = createButton(
   "type",
   "button",
   "id",
-  "five",
+  "5",
   "value",
   "5",
   "5"
@@ -88,7 +94,7 @@ var six = createButton(
   "type",
   "button",
   "id",
-  "six",
+  "6",
   "value",
   "6",
   "6"
@@ -99,7 +105,7 @@ var sub = createButton(
   "type",
   "button",
   "id",
-  "sub",
+  "subtract",
   "value",
   "-",
   "-"
@@ -110,7 +116,7 @@ var one = createButton(
   "type",
   "button",
   "id",
-  "one",
+  "1",
   "value",
   "1",
   "1"
@@ -121,7 +127,7 @@ var two = createButton(
   "type",
   "button",
   "id",
-  "two",
+  "2",
   "value",
   "2",
   "2"
@@ -132,7 +138,7 @@ var three = createButton(
   "type",
   "button",
   "id",
-  "three",
+  "3",
   "value",
   "3",
   "3"
@@ -143,7 +149,7 @@ var mul = createButton(
   "type",
   "button",
   "id",
-  "mul",
+  "multiplication",
   "value",
   "*",
   "*"
@@ -154,7 +160,7 @@ var clr = createButton(
   "type",
   "button",
   "id",
-  "clr",
+  "clear",
   "value",
   "C",
   "C"
@@ -187,7 +193,7 @@ var div = createButton(
   "type",
   "button",
   "id",
-  "div",
+  "division",
   "value",
   "/",
   "/"
@@ -223,7 +229,7 @@ function createButton(tag, cName, aN1, aV1, aN2, aV2, aN3, aV3, val) {
   return ele;
 }
 container.append(cBody);
-document.body.append(container);
+document.body.append(h1,para,container);
 
 //Adding respective event
 
